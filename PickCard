@@ -1,0 +1,37 @@
+/*
+ * author: Katrina Mehring && Chris Wolf
+ *
+ * 2 methods that return a random image from an image array
+ *
+ *The part of the game that is similar to the "Chance" or "Community Chest" cards in the real game.
+ */
+
+import javax.swing.ImageIcon;
+
+public class PickCard {
+	public ImageIcon getChance()
+	{
+		ImageIcon [] chanceCards = new ImageIcon [16];
+		for(int i = 0; i < 16; i++)
+		{
+			chanceCards[i] = new ImageIcon("Chance/Slide" + (i+1) + ".PNG");
+		}
+		
+		int randomInt = (int) Math.floor(Math.random() * 16);
+		
+		return chanceCards[randomInt];
+	}
+	
+	public ImageIcon getFOG()
+	{
+		ImageIcon [] fogCards = new ImageIcon [16];
+		for(int i = 0; i < 16; i++)
+		{
+			fogCards[i] = new ImageIcon("FoundonGround/Slide" + (i+1) + ".PNG");
+		}
+		
+		int randomInt = (int) Math.floor(Math.random() * 16);
+		
+		return fogCards[randomInt];
+	}
+}
