@@ -1,0 +1,70 @@
+/*
+*@author: Chris Wolf && Katrina Mehring
+*
+*This class keeps track of each player in the game
+*/
+
+import javax.swing.ImageIcon;
+
+
+public class Player {
+	String name;
+	double money;
+	int spot = 0;
+	ImageIcon picture;
+	int propertiesOwned = 0;
+	//Cards held
+	
+	public Player() {
+		super();
+	}
+
+	public Player(String name, double money, ImageIcon picture) {
+		super();
+		this.name = name;
+		this.money = money;
+		this.picture = picture;
+		this.spot = 0;
+	}
+	
+	public int getSpot() {
+		return spot;
+	}
+
+	public void setSpot(int spot) {
+		this.spot = spot;
+	}
+
+	public int getPropertiesOwned() {
+		return propertiesOwned;
+	}
+
+	public void setPropertiesOwned(int propertiesOwned) {
+		this.propertiesOwned = propertiesOwned;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public double getMoney() {
+		return money;
+	}
+	
+	public void setMoney(double money) {
+		this.money = money;
+	}
+	
+	public ImageIcon getPicture() {
+		System.out.println("Spot" + spot);
+		return picture;
+	}
+	
+	public void setPicture(ImageIcon picture) {
+		this.picture = picture;
+	}
+}
