@@ -1,0 +1,55 @@
+/*
+*
+*@author: Katrina Mehring
+*
+*This is probably the only part of the code that I wrote by myself
+*/
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.WindowConstants;
+
+
+public class MenuFrame extends JFrame
+{
+	ImageIcon title;
+	
+	public static void main(String [] args)
+	{
+		MenuFrame launcher = new MenuFrame();
+	}
+	
+	public MenuFrame()
+	{
+		title = new ImageIcon(MenuFrame.class.getResource("Title.png"));
+		JFrame frame = new JFrame("College-opoly");
+		frame.setSize(1350,725);
+		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+		JPanel mainPanel = new JPanel();
+		frame.add(mainPanel);
+		mainPanel.setLayout(new BorderLayout());
+		
+		JButton play = new JButton("Play"),
+				exit = new JButton("Exit");
+		JPanel buttons = new JPanel();
+		
+		mainPanel.add(BorderLayout.SOUTH, buttons);
+		buttons.setLayout(new GridLayout());
+		buttons.add(play);
+		buttons.add(exit);
+		
+		JLabel jl = new JLabel();
+		jl.setIcon(title);
+		mainPanel.add(BorderLayout.CENTER, jl);
+		
+		frame.validate();
+	}
+}
